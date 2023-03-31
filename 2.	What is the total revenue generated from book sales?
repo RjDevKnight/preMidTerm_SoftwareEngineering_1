@@ -1,0 +1,5 @@
+USE ebookstore;
+
+SELECT SUM(price * quantity) AS total_revenue
+FROM order_items
+JOIN books ON order_items.book_id = books.book_id;
