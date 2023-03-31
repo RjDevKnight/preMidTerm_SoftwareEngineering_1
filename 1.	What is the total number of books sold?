@@ -1,0 +1,4 @@
+USE ebookstore;
+
+SELECT SUM(quantity) AS total_books_sold
+FROM order_items;
