@@ -1,0 +1,6 @@
+USE ebookstore;
+
+SELECT YEAR(order_date) AS year, SUM(quantity) AS total_books_sold
+FROM orders
+JOIN order_items ON orders.order_id = order_items.order_id
+GROUP BY YEAR(order_date);
